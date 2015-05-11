@@ -6,6 +6,7 @@
 #![warn(unused_qualifications)]
 #![deny(missing_copy_implementations)]
 #![cfg_attr(test, feature(test))]
+#![feature(core)]
 
 extern crate byteorder;
 extern crate num;

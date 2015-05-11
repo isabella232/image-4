@@ -148,7 +148,7 @@ fn derive_codes_and_sizes(bits: &[u8]) -> (Vec<u8>, Vec<u16>) {
 
         // FIXME there is something wrong with this code
         let diff = huffsize[k].wrapping_sub(size);
-        code <<= diff as usize;
+        code = code.wrapping_shl(diff as u32);
 
         size = size.wrapping_add(diff)
     }
